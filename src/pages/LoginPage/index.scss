@@ -1,0 +1,49 @@
+/*ROUTER ANIMATED TRANSITION*/
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.loginBox {
+  min-width: 60vw;
+  min-height: 80vh;
+  max-height: 80vh;
+  border-radius: 6px;
+  .firstHalf {
+    background-image: url(../../../public/imgs/bg-login.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    .logoRow {
+      min-height: 15vh;
+    }
+  }
+  .secondHalf {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .loginBox {
+    min-width: 100vw;
+    min-height: 100vh;
+    .firstHalf {
+      display: none;
+    }
+  }
+}
